@@ -1,5 +1,5 @@
 # NIH-scraper
-A program that takes data from NIHeReporter and ranks based upon project relevance. Fill out the state category and select Active Projects from the 'Fiscal Year' dropdown. Export your search from NIH Reporter with an excel sheet and include Project Abstract. 
+A program that takes data from NIHeReporter and ranks based upon project relevance. Fill out the state category and select Active Projects from the 'Fiscal Year' dropdown. Export your search from NIH Reporter with an excel sheet and include Project Abstract. You'll get back a .csv file that can then be uploaded into excel and filtered for our direct territory.
 
 # these are the kewords and their associated scores that are used
     keyword_scores = {
