@@ -1,2 +1,2 @@
 # NIH-scraper
-program that takes data from NIHeReporter and ranks  based upon project  relevance
+A program that takes data from NIHeReporter and ranks  based upon project  relevance
