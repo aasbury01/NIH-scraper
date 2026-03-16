@@ -5,7 +5,7 @@ This can be run broswer based - currently hosted on render - or locally using th
 
 # Current file size limit is 5MB
 
-# these are the default kewords and their associated scores that are used
+# Below are the default keywords and their associated scores that are used
     keyword_scores = {
         "confocal": 5, "microscope": 5, "microscopy": 5, "resolution":5,
         "imaging":4, "expansion":4, "localization":4, "fluorescent":4,
@@ -26,4 +26,4 @@ This can be run broswer based - currently hosted on render - or locally using th
             df['TF-IDF Score'] = np.array(tfidf_matrix.sum(axis=1)).flatten()
 
 
-# the program will spit back an excel file that can then be opened and further refined. 
+# The program will spit back an excel file that can then be opened and further refined. 
