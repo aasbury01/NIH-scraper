@@ -10,11 +10,13 @@
     <div class="row justify-content-center">
         <div class="col-md-6 p-4 bg-white shadow rounded">
             <h2 class="mb-4 text-center">Upload Excel File to Score Projects</h2>
+            <p> Please upload an Excel file (.xlsx or .xls). CSV is not supported currently.</p>
             <form method="post" enctype="multipart/form-data">
                 <input class="form-control mb-3" type="file" name="excel_file" accept=".xlsx,.xls" required>
                 <button class="btn btn-primary w-100 mb-2" type="submit">Upload & Score</button>
             </form>
-            <a href="{{ url_for('secondary') }}" class="btn btn-secondary w-100">See how this works!</a>
+            <a href="{{ url_for('keywords') }}" class="btn btn-secondary w-100 mb-2">Edit Keyword Scores</a>
+            <a href="{{ url_for('secondary') }}" class="btn btn-info w-100">See how this works!</a>
             {% if message %}
             <div class="alert alert-info mt-3 text-center">{{ message }}</div>
             {% endif %}

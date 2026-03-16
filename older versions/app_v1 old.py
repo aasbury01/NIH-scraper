@@ -28,6 +28,7 @@ def calculate_abstractscore(abstract):
     abstract = str(abstract).lower()
     return sum(points for word, points in keyword_scores.items() if word in abstract)
 
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     message = None
