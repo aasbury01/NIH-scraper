@@ -3,6 +3,8 @@ A program that takes data from NIHeReporter and ranks based upon project relevan
 
 This can be run broswer based - currently hosted on render - or locally using the 'nihscraper_v4.py' file. Make sure you have all necessary pacakges installed.
 
+# Current file size limit is 5MB
+
 # these are the default kewords and their associated scores that are used
     keyword_scores = {
         "confocal": 5, "microscope": 5, "microscopy": 5, "resolution":5,
@@ -16,7 +18,7 @@ This can be run broswer based - currently hosted on render - or locally using th
              df['PT score'] = df['Project Title'].apply(lambda x: calculate_score(x, keywords_dict))
             df['Abstract Score'] = df['Project Abstract'].apply(lambda x: calculate_score(x, keywords_dict))
 
-# TF-IDF scoring uses a model that helps identify relevant and distinct words by comparing it to the other project titles and project abstracts. For example, if the word 'confocal' appears in 4 out of 10 abstracts, those four abstracts will have a higher TF-IDF score than those without the word confocal.
+# TF-IDF scoring uses a model that helps identify relevant and distinct words by comparing it to the other project titles and project abstracts.
             # --- TF-IDF Scoring
             combined_text = df[['Project Title', 'Project Abstract']].fillna('').agg(' '.join, axis=1)
             vectorizer = TfidfVectorizer(stop_words='english')
